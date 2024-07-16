@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viewed Recipes</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #F96F5D;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+main {
+    padding: 20px;
+}
+
+.recipe-container {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.recipe-container h2 {
+    margin: 0;
+    background-color: #F96F5D;
+    color: white;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+}
+
+.recipe {
+    margin-top: 10px;
+}
+
+.recipe h3 {
+    margin: 0 0 10px 0;
+}
+
+.recipe ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f1f1f1;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Viewed Recipes</h1>
+    </header>
+    <main>
+        <section class="saved-recipes" id="savedRecipes"></section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Moore's Recipe Collection</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

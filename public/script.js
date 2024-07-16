@@ -66,3 +66,4 @@ setInterval(updateTime, 1000);
 updateTime();
 
 // Function to search recipes using Edamam API
+

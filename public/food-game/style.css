@@ -1,0 +1,53 @@
+#alert-choose, #alert-match, #alert-no-match {
+  display: none;
+  color: pink;
+  background-color: seagreen;
+  padding: 20px;
+  position: absolute;
+  top: 30%;
+}
+
+#cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  max-width: 340px;
+}
+
+.card-image {
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+
+.container {
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
+  position: relative;
+}
+
+.disabled {
+  display: none;
+  cursor: default;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+
+p {
+  font-size: 16px;
+}
+
+.unclickable {
+  pointer-events: none;
+}
