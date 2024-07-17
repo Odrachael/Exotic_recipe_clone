@@ -97,4 +97,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   shuffleCards();
   createCardGrid();
+
+  // Side navigation functions
+  window.openNav = function() {
+    document.getElementById("mySidenav").style.width = "250px";
+  }
+
+  window.closeNav = function() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
 });

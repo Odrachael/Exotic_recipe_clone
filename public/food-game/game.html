@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,16 +11,20 @@
 </head>
 
 <body class="container">
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="../landing.html">Moore Recipe Finder</a>
+  </div>
+  <span class="menu-button" onclick="openNav()">&#9776;</span>
   <main>
     <h1>Vanilla Memory Game</h1>
-    <h2>Let's Go! &#128513 &#128513</h2>
+    <h2>Let's Have Fun! &#128513 &#128513</h2>
     <div id="cards-grid"></div>
     <div class="alerts">
-      <h3 id="alert-choose">Please, choose another card </h3>
-      <h3 id="alert-match">You have a match SMARTIE! Choose another pair of cards  &#129309</h3>
+      <h3 id="alert-choose">Please, choose another card</h3>
+      <h3 id="alert-match">You have a match SMARTIE! Choose another pair of cards &#129309</h3>
       <h3 id="alert-no-match">Sorry, you have no match. Try again &#129313</h3>
     </div>
-
   </main>
   <script src="db.js" type="text/javascript"></script>
   <script src="script.js" type="text/javascript"></script>

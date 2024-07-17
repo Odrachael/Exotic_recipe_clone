@@ -1,39 +1,21 @@
-#alert-choose, #alert-match, #alert-no-match {
-  display: none;
-  color: pink;
-  background-color: seagreen;
-  padding: 20px;
-  position: absolute;
-  top: 30%;
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  background-color: rgb(217, 176, 176);
 }
-
-#cards-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  max-width: 340px;
-}
-
-.card-image {
-  padding-bottom: 10px;
-  cursor: pointer;
-}
-
 .container {
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 0 auto;
+  padding: 10px;
+  max-width: 1200px;
   text-align: center;
   position: relative;
 }
 
-.disabled {
-  display: none;
-  cursor: default;
-}
-
 h1 {
   font-size: 32px;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 h2 {
@@ -44,11 +26,106 @@ h3 {
   font-size: 20px;
 }
 
+.alerts h3 {
+  display: none;
+  color: pink;
+  background-color: seagreen;
+  padding: 20px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
-p {
-  font-size: 16px;
+#cards-grid {
+  display: grid;
+  gap: 10px;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 600px;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+
+.card-image {
+  width: 100%;
+  padding-bottom: 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.card-image:hover {
+  transform: scale(1.1);
+}
+
+.disabled {
+  display: none;
+  cursor: default;
 }
 
 .unclickable {
   pointer-events: none;
+}
+
+/* Side navigation */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.menu-button {
+  font-size: 30px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #111;
+}
+
+/* Responsive adjustments */
+@media (min-width: 1200px) {
+  #cards-grid {
+    max-width: 800px;
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  #cards-grid {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  }
+}
+
+@media (max-width: 400px) {
+  #cards-grid {
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  }
 }
